@@ -1,28 +1,22 @@
-# HalpPatientsApp
+# Halp Patients App
+Client for Hospital Patients.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+[![Build Status](https://travis-ci.org/halp-project/halp-patients-app.svg?branch=dev)](https://travis-ci.org/halp-project/halp-patients-app)
 
-## Development server
+## Environments
+- [Halp Patients App on Heroku - Master](https://halp-patients-app.herokuapp.com/) (stable, only for customer-oriented releases)
+- [Halp Patients App on Heroku - Development](https://halp-patients-app-staging.herokuapp.com/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Local development
 
-## Code scaffolding
+Run it on [Node 7.x](https://nodejs.org/es/) (Install it via [nvm](https://github.com/creationix/nvm))
+```bash
+npm install // Install dependencies 
+ng serve // Serve app in local http://localhost:4200/ 
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+More scripts: [package.json](https://github.com/halp-project/halp-patients-app/blob/dev/package.json)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Contribution Guides
+### Commits
+Follow [Commitizen guidelines](https://github.com/commitizen/cz-cli) for commit messages by using `git cz` command instead of `git commit`.
