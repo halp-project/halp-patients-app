@@ -1,0 +1,57 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-primary" id="menu-navbar">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" role="button" aria-disabled="true">My Orders</a>
+      </li>
+    </ul>
+    <div class="navbar-box" routerLink="../auth">
+      <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+    </div>
+  </div>
+</nav>
+
+<div class="view">
+  <div class="container menu">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 20rem;">
+          <div class="card-img-block">
+            <img class="card-img" src="../../../assets/icons/dish.svg" alt="Card image cap">
+          </div>
+          <div class="card-block">
+            <h4 class="card-title">Meal Menu</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem;">
+          <div class="card-img-block">
+            <img class="card-img" src="../../../assets/icons/bag.svg" alt="Card image cap">
+          </div>
+          <div class="card-block">
+            <h4 class="card-title">Shopping</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem;">
+          <div class="card-img-block">
+            <img class="card-img" src="../../../assets/icons/book.svg" alt="Card image cap">
+          </div>
+          <div class="card-block">
+            <h4 class="card-title">Order a Book</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
