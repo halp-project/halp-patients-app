@@ -1,0 +1,15 @@
+{
+  "name": "halp-patients-app",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
