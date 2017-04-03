@@ -4,9 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "start": "http-server dist/",
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build --prod"
   },
   "engines": {
     "node": "^7.7.3"
