@@ -1,0 +1,9 @@
+<div class="activity-content">
+  <div class="container-fluid activity-container">
+    <div class="row">
+      <div class="col-3 col-centered shop-box" *ngFor="let shop of shops">
+        <app-shop-card [shop]="shop" (_delete)="deletePatient($shopId)" (_edit)="editPatient($shop)"></app-shop-card>
+      </div>
+    </div>
+  </div>
+</div>
