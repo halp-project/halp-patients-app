@@ -9,4 +9,4 @@ import { ShopComponent } from './shop.component';
   ])],
   exports: [ RouterModule ]
 })
-export class ShopRoutingModule {}
+export class ShopRoutingModule { }
