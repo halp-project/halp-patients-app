@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="container">
+    <div class="row rowPropierties">
+
+      <div class="panel icon-order-box field col-1">
+        <img class="icon-order-box" [src]='order.image' alt="Item icon">
+      </div>
+
+      <div id="textCard" class="field col-3">
+        <p class="card-text">{{ order.title }}</p>
+      </div>
+
+      <div id="textCard" class="field col-2">
+        <p class="card-text">{{order.getTimeAgo()}} minutes ago.</p>
+      </div>
+
+      <div id="textCard" class="field col-1">
+        <p class="card-text">Completed: </p>
+
+        <button type="button" [class]="getButtonClass()">
+          <i [class] = "getButtonImg()"></i>
+        </button>
+      </div>
+      
+    </div>
+  </div>
+</div>
