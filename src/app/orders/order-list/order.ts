@@ -29,9 +29,9 @@ export class Order {
         if(type == 'book'){
             this.image = './assets/icons/book.svg'; 
         } else if(type == 'item'){
-            this.image = './assets/icons/newspaper.svg'; 
+            this.image = './assets/icons/bag.svg'; 
         } else{
-            this.image = './assets/icons/food.svg'; 
+            this.image = './assets/icons/dish.svg'; 
         }
     }
 

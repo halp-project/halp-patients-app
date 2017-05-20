@@ -19,9 +19,9 @@ export class OrderItemComponent implements OnInit {
 
   getButtonClass() {
     if (!this.order.completed) {
-      return "btn btn-warning";
+      return "badge badge-pill badge-warning myBadges";
     } else {
-      return "btn btn-success";
+      return "badge badge-pill badge-success myBadges";
     }
   }
 
@@ -30,6 +30,14 @@ export class OrderItemComponent implements OnInit {
       return "fa fa-clock-o";
     } else {
       return "fa fa-check-circle-o";
+    }
+  }
+
+  getTextStatus() {
+    if(!this.order.completed){
+      return "Pending ";
+    } else {
+      return "Done    ";
     }
   }
 

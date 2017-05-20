@@ -29,3 +29,10 @@
 .rowPropierties {
     padding: 3pt 0;
 }
+
+.myBadges {
+    margin-left: 10pt ; 
+    font-size: 14pt;
+    display:flex;
+    justify-content: center;
+}
