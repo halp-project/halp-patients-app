@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
 import { ShopModule } from './shop/shop.module';
-import { OrdersModule } from './orders/orders.module'; 
+import { BooksModule } from './books/books.module';
+import { OrdersModule } from './orders/orders.module';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
     AuthModule,
     HomeModule,
     ShopModule,
+    BooksModule,
     OrdersModule,
     AppRoutingModule
   ],

@@ -10,7 +10,7 @@ import { Order } from './order-list/order';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
-  oreder: Order;
+  myOrder: Order;
   closeResult: string;
   id = 10;
   submitted = false;
