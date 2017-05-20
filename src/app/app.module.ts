@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
 import { ShopModule } from './shop/shop.module';
+import { BooksModule } from './books/books.module';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     AuthModule,
     HomeModule,
     ShopModule,
+    BooksModule,
     AppRoutingModule
   ],
   providers: [],
