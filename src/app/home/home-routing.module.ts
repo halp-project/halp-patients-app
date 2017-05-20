@@ -4,8 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MenuComponent} from './menu/menu.component';
 
 const routes: Routes = [
-  { path: 'home', redirectTo: 'menu', pathMatch: 'full' },
-  { path: 'menu', component: MenuComponent }
+  { path: 'home', component: MenuComponent }
 ];
 
 @NgModule({
