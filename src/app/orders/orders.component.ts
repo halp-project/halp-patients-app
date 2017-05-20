@@ -17,7 +17,7 @@ export class OrdersComponent implements OnInit {
 
   error: any;
 
-  constructor(private modalService: NgbModal) { }
+  constructor() { }
 
   ngOnInit() {
   }
