@@ -32,6 +32,17 @@ export class BookService {
       .catch(this.handleError);
   }
 
+  loanBook(idbook: number): Promise<boolean> {
+    let url = this.booksUrl + '/' + idbook; 
+    return this.http.post(url, JSON.stringify(localStorage.token))
+      .toPromise()
+      .then((response) => {
+        return response.json().done as boolean;
+      })
+      .catch(this.handleError);
+  }
+
+
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);

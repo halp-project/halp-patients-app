@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Book } from '../book';
+import { BookService } from '../../book.service';
 
 @Component({
   selector: 'app-book-card',
@@ -11,9 +12,23 @@ export class BookCardComponent implements OnInit {
 
   @Input() book: Book;
 
-  constructor() { }
+  constructor(private bookService: BookService) { }
 
   ngOnInit() {
+    console.log(this.book);
+  }
+
+  loanBook() {
+    console.log(this.book);
+    this.bookService.loanBook(this.book.id)
+    .then(result => {
+      if(!result){
+        alert('Sorry, but this book is not available at the moment.');
+      }
+    })
+    .catch(err => {
+      console.error('An error occurred', err);
+    });
   }
 
 }
