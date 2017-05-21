@@ -19,16 +19,17 @@ export class BookCardComponent implements OnInit {
   }
 
   loanBook() {
-    console.log(this.book);
-    this.bookService.loanBook(this.book.id)
-    .then(result => {
-      if(!result){
-        alert('Sorry, but this book is not available at the moment.');
-      }
-    })
-    .catch(err => {
-      console.error('An error occurred', err);
-    });
+    if(confirm("Are you sure you want to borrow the book "+this.book.title+"?")) {
+      this.bookService.loanBook(this.book.id)
+      .then(result => {
+        if(!result){
+          alert('Sorry, but this book is not available at the moment.');
+        }
+      })
+      .catch(err => {
+        console.error('An error occurred', err);
+      });
+    }
   }
 
 }
