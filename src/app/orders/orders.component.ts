@@ -2,6 +2,7 @@ import { Component, OnInit, OnChanges, SimpleChange } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 import { Order } from './order-list/order';
+import { OrderService } from './order.service';
 
 
 @Component({
@@ -15,18 +16,46 @@ export class OrdersComponent implements OnInit {
   id = 10;
   submitted = false;
 
+  ordersBooks: Order[] = [];
+
+  ordersFoods: Order[] = [];
+
+  ordersItems: Order[] = [];
+
   error: any;
 
-  constructor() { }
+  constructor(private orderService: OrderService) { }
+
+  getOrders(): void{
+    this.orderService.getOrders()
+      .then(orders => {
+        for(let i = 0; i < orders.length; i++) {
+          
+          if(orders[i].type == 'book') {
+            this.ordersBooks.push(orders[i]);
+          } else if(orders[i].type == 'item') {
+            this.ordersItems.push(orders[i]);
+          } else {
+            this.ordersFoods.push(orders[i]);
+          }
+
+        }
+      })
+      .catch(error => this.error = error);
+
+    
+  }
 
   ngOnInit() {
+    this.getOrders();
   }
 
   ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
+    this.getOrders();
   }
 
   onSubmit() { this.submitted = true; }
-
+  /*
   ordersBooks: Order[] = [
       new Order(1, 'book', 'Generic Book 1', 'Rupert Ellery',
         101, new Date("2017-05-17T08:23:54.000Z"), true),
@@ -65,5 +94,6 @@ export class OrdersComponent implements OnInit {
       new Order(5, 'food', 'Generic Food 5', 'Emma Madhukar',
         105, new Date("2013-10-19T08:23:54.000Z"), false)
     ];
+    */
 
 }
