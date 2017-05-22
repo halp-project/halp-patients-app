@@ -33,10 +33,16 @@ export class BookService {
   }
 
   loanBook(idbook: number): Promise<boolean> {
+    const headers = new Headers({
+      'Content-Type': 'application/json',
+      'token' : localStorage.id_token
+    });
+
     let url = this.booksUrl + '/' + idbook; 
-    return this.http.post(url, JSON.stringify(localStorage.token))
+    return this.http.post(url, JSON.stringify(localStorage.token), { headers: headers })
       .toPromise()
       .then((response) => {
+        if(response.json().hasOwnProperty('message')) { return false; }
         return response.json().done as boolean;
       })
       .catch(this.handleError);

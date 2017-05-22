@@ -22,7 +22,7 @@ export class AuthComponent implements OnInit {
   onSubmit() {
     this.authService.logIn(this.patient)
       .then((response) => {
-        localStorage.setItem('id_token', response.json().token);
+        localStorage.setItem('id_token', response.json().id_token);
         this.router.navigate(['home']);
       })
       .catch((error: any) => {

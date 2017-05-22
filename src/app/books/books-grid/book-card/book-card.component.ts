@@ -15,7 +15,6 @@ export class BookCardComponent implements OnInit {
   constructor(private bookService: BookService) { }
 
   ngOnInit() {
-    console.log(this.book);
   }
 
   loanBook() {
