@@ -20,7 +20,7 @@ export class OrderService {
     const url = this.ordersUrl;
 
     return this.http
-      .post(url, "", { headers: headers })
+      .get(url + '/user', { headers: headers })
       .toPromise()
       .then(response => {
         let orders: Order[] = [];
